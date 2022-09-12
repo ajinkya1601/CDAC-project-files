@@ -1,0 +1,9 @@
+http://localhost:8080/employees   --- get all  with get method
+
+http://localhost:8080/employees/2  --- get one  with get method
+
+http://localhost:8080/employees     ----save one  with post method
+
+http://localhost:8080/employees/5   --- update   with put method
+
+http://localhost:8080/employees/3  ---delete   with delete method

@@ -16,16 +16,6 @@ primary key (clinic_id)
 );
 
 
-drop table if exists `department`;
-create table department(
-department_id int auto_increment,
-department_name varchar (100) ,
-clinic_id int,
-primary key (department_id),
-foreign key (clinic_id) references clinic (clinic_id)
-);
-
-
 drop table if exists `employee`;
 create table employee(
 emp_id int auto_increment,
@@ -38,11 +28,12 @@ address varchar(300),
 salary int,
 hiring_date date,
 designation varchar(50),
-department_id int,
+department_name varchar(100),
+clinic_id int,
 pathology_lab_id int,
 radiology_lab_id int,
 primary key (emp_id),
-foreign key (department_id) references department (department_id),
+foreign key (clinic_id) references clinic (clinic_id),
 foreign key (pathology_lab_id) references pathology_lab (pathology_lab_id),
 foreign key (radiology_lab_id) references radiology_lab (radiology_lab_id)
 );

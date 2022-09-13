@@ -6,13 +6,15 @@ set foreign_key_checks=0;
 
 drop table if exists `clinic`;
 create table clinic(
-clinic_id int auto_increment,
+id int auto_increment,
 clinic_name varchar(100) not null,
 clinic_address varchar(300) not null,
 clinic_phone varchar(10) unique,
-clinic_time time,
-registration_date varchar (10) default (curdate()),
-primary key (clinic_id)
+morning_time varchar(30),
+afternoon_time varchar(30),
+evening_time varchar(30),
+registration_date date default (curdate()),
+primary key (id)
 );
 
 
@@ -33,7 +35,7 @@ clinic_id int,
 pathology_lab_id int,
 radiology_lab_id int,
 primary key (emp_id),
-foreign key (clinic_id) references clinic (clinic_id),
+foreign key (clinic_id) references clinic (id),
 foreign key (pathology_lab_id) references pathology_lab (pathology_lab_id),
 foreign key (radiology_lab_id) references radiology_lab (radiology_lab_id)
 );
@@ -114,7 +116,7 @@ pathology_lab_name varchar (100),
 head_of_dept varchar(100),
 clinic_id int unique,
 primary key (pathology_lab_id),
-foreign key (clinic_id) references clinic (clinic_id)
+foreign key (clinic_id) references clinic (id)
 );
 
 
@@ -127,7 +129,7 @@ radiology_lab_name varchar (100),
 head_of_dept varchar(100),
 clinic_id int unique,
 primary key (radiology_lab_id),
-foreign key (clinic_id) references clinic (clinic_id)
+foreign key (clinic_id) references clinic (id)
 );
 
 
@@ -152,7 +154,7 @@ primary key (radio_test_id)
 
 
 set foreign_key_checks=1;
-
+use clin_app;
 
 
 

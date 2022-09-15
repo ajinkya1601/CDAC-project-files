@@ -36,4 +36,8 @@ public class EmployeeService {
         } else
             return "Employee with id " + id + " not found";
     }
+
+    public Employee update(Employee employee) {
+        return employeeRepository.save(employee);
+    }
 }

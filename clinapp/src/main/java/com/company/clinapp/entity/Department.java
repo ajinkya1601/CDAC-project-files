@@ -8,26 +8,21 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "clinic")
+@Table(name = "department")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Clinic {
+public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    private String clinicName;
-    private String clinicAddress;
-    private String clinicPhone;
-    private String morningTime;
-    private String afternoonTime;
-    private String eveningTime;
-    private String registrationDate;
+    private String deptName;
+    private Long clinicId;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "clinicId")
-    private List<Department> departments;
+    @JoinColumn(name = "deptId")
+    private List<Employee> employees;
 }
- 

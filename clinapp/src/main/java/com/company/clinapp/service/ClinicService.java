@@ -42,20 +42,6 @@ public class ClinicService {
 
 
     public Clinic update(Clinic clinic) {
-
-//        Optional<Clinic> c = getClinic(clinic.getId());
-//        if (c.isPresent()) {
-//            Clinic c1 = c.get();
-//            c1.setClinicAddress(clinic.getClinicAddress());
-//            c1.setClinicName(clinic.getClinicName());
-//            c1.setClinicPhone(clinic.getClinicPhone());
-//            c1.setClinicTime(clinic.getClinicTime());
-//            c1.setRegistrationDate(clinic.getRegistrationDate());
-//            save(c1);
-//            return c1;
-//        } else
-//            return null;
-
         return clinicRepository.save(clinic);
     }
 }

@@ -37,6 +37,28 @@ public class PrescriptionService {
     }
 
     public Prescription update(Prescription prescription) {
-        return prescriptionRepository.save(prescription);
+//        private Long id;
+//
+//        private String prescriptionDate;
+//        private String diagnosis;
+//        private short quantity;
+//        private short duration;
+//        private String frequency;
+//        private String remarks;
+//        private Long patientId;
+        Optional<Prescription> optional = prescriptionRepository.findById(prescription.getId());
+        if (optional.isPresent()){
+            Prescription oo = optional.get();
+            oo.setId(prescription.getId());
+            oo.setPrescriptionDate(prescription.getPrescriptionDate());
+            oo.setDiagnosis(prescription.getDiagnosis());
+            oo.setQuantity(prescription.getQuantity());
+            oo.setDuration(prescription.getDuration());
+            oo.setFrequency(prescription.getFrequency());
+            oo.setRemarks(prescription.getRemarks());
+            oo.setPatientId(prescription.getPatientId());
+            return prescriptionRepository.save(oo);
+        }
+        return null;
     }
 }

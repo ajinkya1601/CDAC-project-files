@@ -41,7 +41,6 @@ address varchar(300),
 salary int,
 hiring_date date,
 designation varchar(50),
-department_name varchar(100),
 dept_id int,
 primary key (id),
 foreign key (dept_id) references department (id)

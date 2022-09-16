@@ -28,11 +28,10 @@ public class Employee {
 	private int salary;
 	private String hiringDate;
 	private String designation;
-	private String departmentName;
 	private Long deptId;
 
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.LAZY)
 	@JoinColumn(name="employeeId")
 	private List<Patient> patients;
 

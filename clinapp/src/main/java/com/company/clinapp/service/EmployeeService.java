@@ -38,6 +38,23 @@ public class EmployeeService {
     }
 
     public Employee update(Employee employee) {
-        return employeeRepository.save(employee);
+
+        Optional<Employee> optional = getEmployee(employee.getId());
+        if (optional.isPresent()) {
+            Employee oo = optional.get();//oo is original object from database
+            oo.setEmpFirstName(employee.getEmpFirstName());
+            oo.setEmpLastName(employee.getEmpLastName());
+            oo.setMobile(employee.getMobile());
+            oo.setGender(employee.getGender());
+            oo.setEmail(employee.getEmail());
+            oo.setDob(employee.getDob());
+            oo.setAddress(employee.getAddress());
+            oo.setSalary(employee.getSalary());
+            oo.setHiringDate(employee.getHiringDate());
+            oo.setDesignation(employee.getDesignation());
+            oo.setDeptId(employee.getDeptId());
+            return employeeRepository.save(oo);
+        }
+        return null;
     }
 }

@@ -37,8 +37,16 @@ public class DepartmentService {
             return "Department with id " + id + " not found";
     }
 
-    public Department update(Department clinic) {
-        return departmentRepository.save(clinic);
+    public Department update(Department department) {
+        Optional<Department> optional = getDepartment(department.getId());
+        if (optional.isPresent()) {
+            Department oo = optional.get();//oo is original object from database
+            oo.setId(department.getId());
+            oo.setDeptName(department.getDeptName());
+            oo.setClinicId(department.getClinicId());
+            return departmentRepository.save(oo);
+        }
+        return null;
     }
 
 }

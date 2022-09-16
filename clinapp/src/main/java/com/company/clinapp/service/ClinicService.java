@@ -17,7 +17,6 @@ public class ClinicService {
     }
 
     public List<Clinic> getAllClinics() {
-
         return clinicRepository.findAll();
     }
 
@@ -42,6 +41,19 @@ public class ClinicService {
 
 
     public Clinic update(Clinic clinic) {
-        return clinicRepository.save(clinic);
+        Optional<Clinic> optional = getClinic(clinic.getId());
+        if (optional.isPresent()) {
+            Clinic oo = optional.get(); //oo is original object from database
+            oo.setId(clinic.getId());
+            oo.setClinicName(clinic.getClinicName());
+            oo.setClinicAddress(clinic.getClinicAddress());
+            oo.setClinicPhone(clinic.getClinicPhone());
+            oo.setMorningTime(clinic.getMorningTime());
+            oo.setAfternoonTime(clinic.getAfternoonTime());
+            oo.setEveningTime(clinic.getEveningTime());
+            oo.setRegistrationDate(clinic.getRegistrationDate());
+            return clinicRepository.save(oo);
+        }
+        return null;
     }
 }

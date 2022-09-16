@@ -59,7 +59,7 @@ medical_registration_no long,
 additional_qualification varchar(100),
 additional_qualification_completion_year year,
 experience tinyint,
-employee_id int unique not null,
+employee_id int unique,
 primary key (id),
 foreign key (employee_id) references employee(id)
 );

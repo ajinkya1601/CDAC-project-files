@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Data
 public class DocQualification {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

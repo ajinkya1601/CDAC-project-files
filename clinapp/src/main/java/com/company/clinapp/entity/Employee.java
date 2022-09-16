@@ -36,6 +36,7 @@ public class Employee {
 	private List<Patient> patients;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "employeeId", insertable = false, updatable = false)
+	@JoinColumn(name = "employeeId")
 	private List<DocQualification> docQualifications;
+	//, insertable = false, updatable = false
 }

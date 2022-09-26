@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.List;
 
 @Entity
@@ -17,7 +18,6 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-
 	private String empFirstName;
 	private String empLastName;
 	private String mobile;
@@ -28,6 +28,7 @@ public class Employee {
 	private int salary;
 	private String hiringDate;
 	private String designation;
+//	private Blob image;
 	private Long deptId;
 
 

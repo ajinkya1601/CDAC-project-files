@@ -1,59 +1,58 @@
 package com.company.clinapp.controller;
 
+import com.company.clinapp.dao.UserRepository;
 import com.company.clinapp.entity.JwtRequest;
 import com.company.clinapp.entity.JwtResponse;
-import com.company.clinapp.service.CustomUserServiceDetails;
-import com.company.clinapp.service.UserService;
-import com.company.clinapp.utility.JwtTokenHelper;
+import com.company.clinapp.entity.User;
+import com.company.clinapp.helper.JwtUtil;
+import com.company.clinapp.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/authenticate")
+@RequestMapping("/login")
 public class JwtController {
 
     @Autowired
-    private JwtTokenHelper jwtTokenHelper;
+    private CustomUserDetailsService customUserDetailsService;
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
-    private CustomUserServiceDetails userDetailsService;
+    private JwtUtil jwtUtil;
 
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @PostMapping
-    public String generateToken(@RequestBody JwtRequest jwtRequest) throws Exception {
+    public JwtResponse generateToken(@RequestBody JwtRequest jwtRequest) throws Exception {
+//        System.out.println(jwtRequest);
         try {
-            authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(jwtRequest.getUserName()
-                            ,jwtRequest.getPassword()));
-        }catch (Exception e){
-            throw new Exception("Invalid Username or password");
+            this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+                    jwtRequest.getUsername(),
+                    jwtRequest.getPassword()
+            ));
+        }catch (UsernameNotFoundException e){
+            e.printStackTrace();
+            throw new Exception("Bad credential");
+        }catch (BadCredentialsException e){
+            e.printStackTrace();
+            throw new Exception("Bad credential");
         }
-            return jwtTokenHelper.generateToken(jwtRequest.getUserName());
-//    public ResponseEntity<JwtResponse> createJwtToken(@RequestBody JwtRequest jwtRequest) throws Exception {
-//        this.authenticate(jwtRequest.getUserName(), jwtRequest.getPassword());
-//
-//        UserDetails userDetails = this.userDetailsService.loadUserByUsername(jwtRequest.getUserName());
-//        String token = this.jwtTokenHelper.generateToken(String.valueOf(userDetails));
-//        JwtResponse response = new JwtResponse();
-//        response.setJwtToken(token);
-//        return new ResponseEntity<JwtResponse>(response, HttpStatus.OK);
-    }
+        UserDetails userDetails=this.customUserDetailsService.loadUserByUsername(jwtRequest.getUsername());
 
-//    private void authenticate(String userName, String password) {
-//
-//        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
-//                new UsernamePasswordAuthenticationToken(userName, password);
-//        this.authenticationManager.authenticate(usernamePasswordAuthenticationToken);
-//    }
+        String token=jwtUtil.generateToken(userDetails);
+//        System.out.println("JWT "+token);
+        User user= userRepository.findByUsername(jwtRequest.getUsername());
+        return new JwtResponse(user,token);
+    }
 }

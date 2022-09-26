@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.List;
 
 @Entity
@@ -26,6 +27,8 @@ public class Patient {
     private String mobile;
     private String email;
     private String address;
+    private String gender;
+//    private Blob image;
     private Long employeeId;
     private Long deptId;
 

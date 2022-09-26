@@ -18,5 +18,9 @@ public class Product {
     private Long id;
     private String productName;
     private String productManufacturerName;
+    private short quantity;
+    private short duration;
+    private String frequency;
+    private String remarks;
     private Long prescriptionId;
 }

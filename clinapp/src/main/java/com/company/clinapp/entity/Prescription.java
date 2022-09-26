@@ -20,10 +20,8 @@ public class Prescription {
 
     private String prescriptionDate;
     private String diagnosis;
-    private short quantity;
-    private short duration;
-    private String frequency;
-    private String remarks;
+    private short weight;
+    private String bp;
     private Long patientId;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

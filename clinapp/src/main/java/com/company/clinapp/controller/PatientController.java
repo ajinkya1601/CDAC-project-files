@@ -17,14 +17,14 @@ public class PatientController {
         this.patientService = patientService;
     }
 
+    @GetMapping("/patientRecordByMobile/{mobileNo}")
+    public Patient patientRecordByMobile(@PathVariable String mobileNo){
+        return patientService.patientRecordByMobile(mobileNo);
+    }
+
     @GetMapping
     public List<Patient> getAllPatients(){
         return patientService.getAllPatients();
-    }
-
-    @GetMapping("/onlyOnePatient/{patientId}")
-    public Patient getOnlyOnePatient(@PathVariable Long patientId){
-        return patientService.getOnlyOnePatient(patientId);
     }
 
     @GetMapping("/{patientId}")
@@ -49,5 +49,11 @@ public class PatientController {
     public Patient update(@RequestBody Patient patient){
         return patientService.update(patient);
     }
+
+    @GetMapping("/onlyOnePatient/{patientId}")
+    public Patient getOnlyOnePatient(@PathVariable Long patientId){
+        return patientService.getOnlyOnePatient(patientId);
+    }
+
 
 }

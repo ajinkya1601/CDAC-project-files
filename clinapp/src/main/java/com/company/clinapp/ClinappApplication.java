@@ -9,4 +9,5 @@ public class ClinappApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ClinappApplication.class, args);
 	}
+
 }

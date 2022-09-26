@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.List;
 
 @Entity
@@ -19,16 +20,19 @@ public class Clinic {
     private Long id;
 
     private String clinicName;
+    private String clinicEmail;
     private String clinicAddress;
     private String clinicPhone;
     private String morningTime;
     private String afternoonTime;
     private String eveningTime;
+//    private Blob image;
     private String registrationDate;
-    private Long userId;
+    private String userUsername;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "clinicId")
     private List<Department> departments;
+
 }
  

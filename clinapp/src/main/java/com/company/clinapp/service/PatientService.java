@@ -16,8 +16,16 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
 
+    public Patient patientRecordByMobile(String mobile){
+       return patientRepository.findByMobile(mobile);
+    }
+
     public List<Patient> getAllPatients() {
         return patientRepository.findAll();
+    }
+
+    public Optional<Patient> getPatient(Long id) {
+        return patientRepository.findById(id);
     }
 
     public Patient getOnlyOnePatient(Long id){
@@ -37,11 +45,6 @@ public class PatientService {
         }
         return null;
     }
-
-    public Optional<Patient> getPatient(Long id) {
-        return patientRepository.findById(id);
-    }
-
 
     public Patient save(Patient patient) {
         return patientRepository.save(patient);

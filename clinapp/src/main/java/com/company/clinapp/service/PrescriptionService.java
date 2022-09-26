@@ -20,6 +20,11 @@ public class PrescriptionService {
         return prescriptionRepository.findAll();
     }
 
+    public Optional<Prescription> getPrescription(Long id) {
+        return prescriptionRepository.findById(id);
+    }
+
+
     public Prescription getOnlyOnePrescription(Long id){
         if (getPrescription(id).isPresent()){
             Prescription prescription = getPrescription(id).get();
@@ -27,18 +32,12 @@ public class PrescriptionService {
             oo.setId(prescription.getId());
             oo.setPrescriptionDate(prescription.getPrescriptionDate());
             oo.setDiagnosis(prescription.getDiagnosis());
-            oo.setQuantity(prescription.getQuantity());
-            oo.setDuration(prescription.getDuration());
-            oo.setFrequency(prescription.getFrequency());
-            oo.setRemarks(prescription.getRemarks());
+            oo.setWeight(prescription.getWeight());
+            oo.setBp(prescription.getBp());
             oo.setPatientId(prescription.getPatientId());
             return oo;
         }
         return null;
-    }
-
-    public Optional<Prescription> getPrescription(Long id) {
-        return prescriptionRepository.findById(id);
     }
 
     public Prescription save(Prescription prescription) {
@@ -54,17 +53,14 @@ public class PrescriptionService {
     }
 
     public Prescription update(Prescription prescription) {
-
         Optional<Prescription> optional = prescriptionRepository.findById(prescription.getId());
         if (optional.isPresent()){
             Prescription oo = optional.get();
             oo.setId(prescription.getId());
             oo.setPrescriptionDate(prescription.getPrescriptionDate());
             oo.setDiagnosis(prescription.getDiagnosis());
-            oo.setQuantity(prescription.getQuantity());
-            oo.setDuration(prescription.getDuration());
-            oo.setFrequency(prescription.getFrequency());
-            oo.setRemarks(prescription.getRemarks());
+            oo.setWeight(prescription.getWeight());
+            oo.setBp(prescription.getBp());
             oo.setPatientId(prescription.getPatientId());
             return prescriptionRepository.save(oo);
         }

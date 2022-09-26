@@ -22,11 +22,6 @@ public class ClinicController {
         return clinicService.getAllClinics();
     }
 
-    @GetMapping("/onlyOneClinic/{clinicId}")
-    public Clinic onlyOneClinic(@PathVariable Long clinicId){
-        return clinicService.onlyOneClinic(clinicId);
-    }
-
 
     @GetMapping("/{clinicId}")
     public Clinic getClinic(@PathVariable Long clinicId){
@@ -51,4 +46,10 @@ public class ClinicController {
     public Clinic update(@RequestBody Clinic clinic){
         return clinicService.update(clinic);
     }
+
+    @GetMapping("/onlyOneClinic/{clinicId}")
+    public Clinic onlyOneClinic(@PathVariable Long clinicId){
+        return clinicService.onlyOneClinic(clinicId);
+    }
+
 }

@@ -20,28 +20,27 @@ public class ClinicService {
         return clinicRepository.findAll();
     }
 
-    public Clinic onlyOneClinic(Long id){
-       if (getClinic(id).isPresent()){
-           Clinic dbObject = getClinic(id).get();
-           Clinic clinic = new Clinic();
-           clinic.setId(dbObject.getId());
-           clinic.setClinicName(dbObject.getClinicName());
-           clinic.setClinicAddress(dbObject.getClinicAddress());
-           clinic.setClinicPhone(dbObject.getClinicPhone());
-           clinic.setMorningTime(dbObject.getMorningTime());
-           clinic.setAfternoonTime(dbObject.getAfternoonTime());
-           clinic.setEveningTime(dbObject.getEveningTime());
-           clinic.setRegistrationDate(dbObject.getRegistrationDate());
-           return clinic;
-       }
-       return null;
-    }
-
-
     public Optional<Clinic> getClinic(Long id) {
         return clinicRepository.findById(id);
     }
 
+    public Clinic onlyOneClinic(Long id){
+        if (getClinic(id).isPresent()){
+            Clinic dbObject = getClinic(id).get();
+            Clinic clinic = new Clinic();
+            clinic.setId(dbObject.getId());
+            clinic.setClinicName(dbObject.getClinicName());
+            clinic.setClinicAddress(dbObject.getClinicAddress());
+            clinic.setClinicPhone(dbObject.getClinicPhone());
+            clinic.setMorningTime(dbObject.getMorningTime());
+            clinic.setAfternoonTime(dbObject.getAfternoonTime());
+            clinic.setEveningTime(dbObject.getEveningTime());
+            clinic.setRegistrationDate(dbObject.getRegistrationDate());
+//            clinic.setImage(dbObject.getImage());
+            return clinic;
+        }
+        return null;
+    }
 
     public Clinic save(Clinic clinic) {
         return clinicRepository.save(clinic);
@@ -70,6 +69,7 @@ public class ClinicService {
             oo.setAfternoonTime(clinic.getAfternoonTime());
             oo.setEveningTime(clinic.getEveningTime());
             oo.setRegistrationDate(clinic.getRegistrationDate());
+//            oo.setImage(clinic.getImage());
             return clinicRepository.save(oo);
         }
         return null;

@@ -21,6 +21,10 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
+    public Optional<Employee> getEmployee(Long id) {
+        return employeeRepository.findById(id);
+    }
+
     public Employee getOnlyOneEmployee(Long id){
         if (getEmployee(id).isPresent()) {
             Employee dbObject = getEmployee(id).get();
@@ -40,10 +44,6 @@ public class EmployeeService {
             return employee;
         }
         return null;
-    }
-
-    public Optional<Employee> getEmployee(Long id) {
-        return employeeRepository.findById(id);
     }
 
     public Employee save(Employee employee) {

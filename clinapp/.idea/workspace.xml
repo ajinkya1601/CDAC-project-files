@@ -4,112 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d098c6-19cf-4538-8206-17ffce71013d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ide.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.j2ee.webservice.ui.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RemoteSystemsTempFiles/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/config/JwtAuthentificationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/JwtController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/dao/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/JwtRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/CustomUserServiceDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/utility/JwtTokenHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/ClinappApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/config/CorsConfig$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/config/CorsConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/config/JwtAuthenticationEntryPoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/config/JwtAuthentificationFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/ClinicController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/DepartmentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/DocQualificationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/EmployeeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/JwtController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/PatientController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/PrescriptionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/ClinicRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/DepartmentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/DocQualificationRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/EmployeeRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/PatientRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/PrescriptionRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/ProductRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/dao/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/Clinic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/Department.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/DocQualification.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/JwtRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/JwtResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/Patient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/Prescription.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/ClinicService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/CustomUserServiceDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/DepartmentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/DocQualificationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/EmployeeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/PatientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/PrescriptionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/ProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/clinapp/utility/JwtTokenHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/company/clinapp/ClinappApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Direct insert Statements.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Direct insert Statements.sql" afterDir="false" />
+    <list default="true" id="b423b4ab-f122-48e1-81a1-adf642d03841" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/ClinappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/ClinappApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/config/ClinicConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/ClinicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/ClinicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/PrescriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/controller/PrescriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/dao/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/dao/PatientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Clinic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Clinic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Prescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Prescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/ClinicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/ClinicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/PatientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/PrescriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/clinapp/service/PrescriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo table script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../demo table script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +28,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -134,28 +41,26 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2EcieSEa6b7jRp7cQUKcnG5lXaq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="2F7Ccdt5F97qFP1xFkEwbxvPRXd" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "H:/Ajinkya/CDAC/Final Project/DemoProjectForJWT trial",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Ajinkya/CDAC/Final Project/DemoProjectForJWT trial&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.ClinappApplication">
+}</component>
+  <component name="RunManager">
     <configuration name="ClinappApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.clinapp.ClinappApplication" />
       <module name="clinapp" />
@@ -169,45 +74,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Demo" />
-      <module name="clinapp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ClinappApplication" />
-        <item itemvalue="Application.Demo" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02d098c6-19cf-4538-8206-17ffce71013d" name="Changes" comment="" />
-      <created>1662901370519</created>
+      <changelist id="b423b4ab-f122-48e1-81a1-adf642d03841" name="Changes" comment="" />
+      <created>1663833819042</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662901370519</updated>
+      <updated>1663833819042</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/clinapp$ClinappApplication.ic" NAME="ClinappApplication Coverage Results" MODIFIED="1663313725484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.company.clinapp.*</FILTER>
-    </SUITE>
   </component>
 </project>

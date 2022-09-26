@@ -20,6 +20,10 @@ public class DepartmentService {
         return departmentRepository.findAll();
     }
 
+    public Optional<Department> getDepartment(Long id) {
+        return departmentRepository.findById(id);
+    }
+
     public Department onlyOneDept(Long id){
         if (getDepartment(id).isPresent()){
             Department dbObject = getDepartment(id).get();
@@ -30,10 +34,6 @@ public class DepartmentService {
             return department;
         }
         return null;
-    }
-
-    public Optional<Department> getDepartment(Long id) {
-        return departmentRepository.findById(id);
     }
 
     public Department save(Department department) {

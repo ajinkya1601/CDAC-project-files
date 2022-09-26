@@ -20,6 +20,18 @@ public class DepartmentService {
         return departmentRepository.findAll();
     }
 
+    public Department onlyOneDept(Long id){
+        if (getDepartment(id).isPresent()){
+            Department dbObject = getDepartment(id).get();
+            Department department = new Department();
+            department.setId(dbObject.getId());
+            department.setDeptName(dbObject.getDeptName());
+            department.setClinicId(dbObject.getClinicId());
+            return department;
+        }
+        return null;
+    }
+
     public Optional<Department> getDepartment(Long id) {
         return departmentRepository.findById(id);
     }

@@ -4,17 +4,29 @@ use clin_app_demo1;
 set foreign_key_checks=0;
 
 
+drop table if exists `user`;
+create table user(
+username varchar(100) not null default "username",
+password varchar(100),
+role varchar(50),
+primary key(username)
+);
+
+
 drop table if exists `clinic`;
 create table clinic(
 id int auto_increment,
 clinic_name varchar(100) not null,
+clinic_email varchar(100),
 clinic_address varchar(300) not null,
 clinic_phone varchar(10) unique,
 morning_time varchar(30),
 afternoon_time varchar(30),
 evening_time varchar(30),
 registration_date date default (curdate()),
-primary key (id)
+user_username  varchar(100),
+primary key (id),
+foreign key (user_username) references user  (username)
 );
 
 
@@ -75,6 +87,7 @@ age tinyint,
 mobile varchar(10) default 'NA',
 email varchar (100),
 address varchar(300),
+gender varchar(6) not null,
 dept_id int, 
 employee_id int,
 primary key (id),
@@ -89,10 +102,8 @@ create table prescription(
 id int auto_increment,
 prescription_date date default (curdate()),
 diagnosis longtext,
-quantity tinyint,
-duration tinyint,
-frequency varchar (20),
-remarks varchar (30),
+weight tinyint,
+bp varchar(10),
 patient_id int,
 primary key (id),
 foreign key (patient_id) references patient(id)
@@ -105,6 +116,10 @@ create table product(
 id int auto_increment,
 product_name varchar (100),
 product_manufacturer_name varchar (100),
+quantity tinyint,
+duration tinyint,
+frequency varchar (20),
+remarks varchar (30),
 prescription_id int,
 primary key (id),
 foreign key (prescription_id) references prescription(id)

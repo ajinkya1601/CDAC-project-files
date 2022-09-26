@@ -22,6 +22,11 @@ public class PrescriptionController {
         return prescriptionService.getAllPrescriptions();
     }
 
+    @GetMapping("/onlyOnePrescription/{prescriptionId}")
+    public Prescription getOnlyOnePrescription(@PathVariable Long prescriptionId){
+        return prescriptionService.getOnlyOnePrescription(prescriptionId);
+    }
+
     @GetMapping("/{prescriptionId}")
     public Prescription getPrescription(@PathVariable Long prescriptionId){
         Optional<Prescription> optional = prescriptionService.getPrescription(prescriptionId);

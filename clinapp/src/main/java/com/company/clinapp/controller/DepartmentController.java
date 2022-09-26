@@ -22,6 +22,11 @@ public class DepartmentController {
         return departmentService.getAllDepartments();
     }
 
+    @GetMapping("/onlyOneDept/{deptId}")
+    public Department onlyOneDept(@PathVariable Long deptId){
+        return departmentService.onlyOneDept(deptId);
+    }
+
     @GetMapping("/{deptId}")
     public Department getDepartment(@PathVariable Long deptId) {
         Optional<Department> optional = departmentService.getDepartment(deptId);

@@ -20,6 +20,24 @@ public class PatientService {
         return patientRepository.findAll();
     }
 
+    public Patient getOnlyOnePatient(Long id){
+        if (getPatient(id).isPresent()){
+            Patient patient = getPatient(id).get();
+            Patient op = new Patient();
+            op.setAddress(patient.getAddress());
+            op.setAge(patient.getAge());
+            op.setEmail(patient.getEmail());
+            op.setEmployeeId(patient.getEmployeeId());
+            op.setFirstName(patient.getFirstName());
+            op.setLastName(patient.getLastName());
+            op.setId(patient.getId());
+            op.setMobile(patient.getMobile());
+            op.setDeptId(patient.getDeptId());
+            return op;
+        }
+        return null;
+    }
+
     public Optional<Patient> getPatient(Long id) {
         return patientRepository.findById(id);
     }

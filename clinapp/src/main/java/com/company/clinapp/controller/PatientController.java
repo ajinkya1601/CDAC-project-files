@@ -22,6 +22,11 @@ public class PatientController {
         return patientService.getAllPatients();
     }
 
+    @GetMapping("/onlyOnePatient/{patientId}")
+    public Patient getOnlyOnePatient(@PathVariable Long patientId){
+        return patientService.getOnlyOnePatient(patientId);
+    }
+
     @GetMapping("/{patientId}")
     public Patient getPatient(@PathVariable Long patientId){
         Optional<Patient> optional = patientService.getPatient(patientId);

@@ -25,6 +25,7 @@ public class Clinic {
     private String afternoonTime;
     private String eveningTime;
     private String registrationDate;
+    private Long userId;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "clinicId")

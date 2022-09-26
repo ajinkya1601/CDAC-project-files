@@ -21,6 +21,27 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
+    public Employee getOnlyOneEmployee(Long id){
+        if (getEmployee(id).isPresent()) {
+            Employee dbObject = getEmployee(id).get();
+            Employee employee = new Employee();
+            employee.setEmpFirstName(dbObject.getEmpFirstName());
+            employee.setEmpLastName(dbObject.getEmpLastName());
+            employee.setMobile(dbObject.getMobile());
+            employee.setGender(dbObject.getGender());
+            employee.setEmail(dbObject.getEmail());
+            employee.setDob(dbObject.getDob());
+            employee.setAddress(dbObject.getAddress());
+            employee.setSalary(dbObject.getSalary());
+            employee.setHiringDate(dbObject.getHiringDate());
+            employee.setDesignation(dbObject.getDesignation());
+            employee.setDeptId(dbObject.getDeptId());
+            employee.setId(dbObject.getId());
+            return employee;
+        }
+        return null;
+    }
+
     public Optional<Employee> getEmployee(Long id) {
         return employeeRepository.findById(id);
     }

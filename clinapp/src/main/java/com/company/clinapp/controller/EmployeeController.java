@@ -24,6 +24,10 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 
+    @GetMapping("/onlyOneEmplyoee/{employeeId}")
+    public Employee getOnlyOneEmployee(@PathVariable Long employeeId){
+        return employeeService.getOnlyOneEmployee(employeeId);
+    }
     @GetMapping("/{employeeId}")
     public Employee getEmployee(@PathVariable Long employeeId) {
         Optional<Employee> optional = employeeService.getEmployee(employeeId);

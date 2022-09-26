@@ -22,6 +22,11 @@ public class ClinicController {
         return clinicService.getAllClinics();
     }
 
+    @GetMapping("/onlyOneClinic/{clinicId}")
+    public Clinic onlyOneClinic(@PathVariable Long clinicId){
+        return clinicService.onlyOneClinic(clinicId);
+    }
+
 
     @GetMapping("/{clinicId}")
     public Clinic getClinic(@PathVariable Long clinicId){
